@@ -1,5 +1,6 @@
-import { Button, Card, Col, Row } from "react-bootstrap"
+import { Button, Card, Col } from "react-bootstrap"
 import { Article } from "./HomeComponent"
+import { Link } from "react-router-dom"
 
 const CardComponent = ({info}: {info: Article}) => {
     return (
@@ -11,7 +12,9 @@ const CardComponent = ({info}: {info: Article}) => {
                     <Card.Text>
                     {info.summary}
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Link to={'/details/' + info.id}>
+                        <Button variant="primary">Details</Button>
+                    </Link>
                 </Card.Body>
             </Card>
         </Col>
