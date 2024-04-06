@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import CardComponent from './CardComponent';
 import { Col, Row } from 'react-bootstrap';
+import NavBarComponent from './NavBarComponent';
 
 export interface Welcome {
     count: number
@@ -44,7 +45,7 @@ const HomeComponent = () => {
     
     return (
         <>
-            <h1>NEWS!!</h1>
+            <NavBarComponent />
             <Row>
             {
                 articles && articles.results ? (
